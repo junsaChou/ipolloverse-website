@@ -1,11 +1,22 @@
-<script setup lang="ts">
-  
-</script>
-
 <template>
-  <router-view></router-view>
+  <div id="#app">
+    <IpoHed></IpoHed>
+    <router-view/>
+    <IpoFooter/>
+  </div>
+  
 </template>
-
+<script>
+import IpoHed from '@/components/header.vue'
+import IpoFooter from "@/components/IpoFooter.vue"
+export default {
+  name: 'App',
+  components:{
+    IpoHed,
+    IpoFooter
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -13,6 +24,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* margin-top: 60px; */
 }
 </style>

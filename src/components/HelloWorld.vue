@@ -1,36 +1,33 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-const  message:number = 1;
-const parent = () => {
-  console.info('parent')
-}
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-  <div @click="parent">
-    <button @click.stop="count++">{{count}}</button>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+
   </div>
 </template>
 
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String,
+  },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
 a {
   color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
 }
 </style>
