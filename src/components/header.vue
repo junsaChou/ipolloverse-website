@@ -41,6 +41,9 @@
               </li>
             <li class="ipo_menu_item" @click="goBack('https://medium.com/@ipolloverse')">News</li>
             <li class="ipo_menu_item" @click="goBack('#contact')">Contact</li>
+             <li class="ipo_menu_item">
+               <router-link to="/TestCamp"  >TestCamp</router-link>
+            </li>
           </ul>
         </div>
         <div class="burger" @click=" isActive=!isActive">
@@ -55,6 +58,7 @@
 
 <script>
 import { reactive,toRefs } from 'vue'
+import { goBack } from "../utils"
 export default {
   name: 'ipoHed',
   props: {
@@ -67,16 +71,6 @@ export default {
     })
     const handleSelect = (key,keyPath)=>{
       // console.log( key )
-    }
-    const goBack = (url) =>{
-      if( url.indexOf('#')!= -1 ){
-        document.querySelector(url).scrollIntoView(true);
-        return
-      }
-      if( url != '' ){
-        window.open(url)
-        return
-      }
     }
     return{
       ...toRefs(data),
@@ -117,11 +111,11 @@ export default {
       display: inline-block;
       img {
         width: 175px;
-        height: 50px;
+        height: auto;
       }
     }
     .list {
-      width: 500px;
+      width: 520px;
       height: 60px;
       font-size: 28px;
       color: #fff;
@@ -135,7 +129,7 @@ export default {
           color: #fff;
           font-size: 20px;
           height: 100%;
-          margin: 0 20px;
+          margin: 0 10px;
           font-weight: bold;
           cursor: pointer;
           position: relative;

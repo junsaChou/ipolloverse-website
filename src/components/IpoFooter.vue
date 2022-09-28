@@ -11,7 +11,17 @@
         </div>
         <div class="rit">
              <div class="openUrl" v-for=" ( k,i ) in menu" :key="i" @click="goBack(k.url)">
-                <img :src="k.img" alt="">
+                
+                <img :src="k.img" alt="contact@iPolloverse.com" v-if=" i < 4 ">
+                <el-tooltip
+                    v-else
+                    class="box-item"
+                    effect="dark"
+                    content="contact@iPolloverse.com"
+                    placement="top"
+                >
+                     <img :src="k.img" alt="contact@iPolloverse.com" >
+                </el-tooltip>
             </div> 
         </div>
    
@@ -40,8 +50,16 @@ export default {
             {   img: new URL("../assets/img/medium.png", import.meta.url).href,
                 url:'https://medium.com/@ipolloverse'
             },
+            {   img: new URL("../assets/img/miner.png", import.meta.url).href,
+                url: 'https://discord.gg/8VTVnApfqG',
+            },
+            {   img: new URL("../assets/img/eco.png", import.meta.url).href,
+                url:'https://t.me/iPolloverseminer'
+                // url:'https://t.me/iPolloverseeco'
+            },
             {   img: new URL("../assets/img/email.png", import.meta.url).href,
-                url:''
+                url: ''
+                // url:'mailto:contact@iPolloverse.com'
             }
         ]
     });
@@ -82,7 +100,7 @@ footer{
             .logo img{
                 display: block;
                 width: 175px;
-                height: 50px;
+                height: auto;
             }
             .website{
                 padding-top: 10px;
@@ -95,17 +113,18 @@ footer{
         .rit{
             display: flex;
             align-items: center;
-            
+            justify-content: space-between;
+            width: 400px;
             img{
                 cursor: pointer;
                 display: block;
                 width: 50px;
                 height: 50px;
-                margin-left: 60px;
+                // margin-left: 60px;
             }
-            .openUrl:nth-child(3) img{
-                cursor:not-allowed;
-            }
+            // .openUrl:nth-child(5) img{
+            //     cursor:not-allowed;
+            // }
         }
     }
 }
@@ -115,6 +134,9 @@ footer{
             display: grid;
             grid-template-columns: 1fr;
             row-gap: 20px;
+            .rit{
+                width: auto;
+            }
         }
     }
 }
