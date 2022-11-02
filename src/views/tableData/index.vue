@@ -4,13 +4,16 @@
       <el-table :data="tableData" border style="width: 100%"  height="80vh">
         <el-table-column prop="Id" label="Id" width="80"  />
         <el-table-column prop="NodeAddr" label="Node Address" width="160" />
-        <el-table-column prop="OrgName" label="organization Name" width="160" />
+        <el-table-column prop="OrgName" label="Organization Name" width="160" />
         <el-table-column prop="NodeName" label="Node Name" width="160" />
         <el-table-column prop="Gpu" label="GUP Info" width="100"/>
         <el-table-column prop="Cpu" label="CPU Info" width="100"/>
         <el-table-column prop="Os" label="Os" width="100"/>
+        <el-table-column prop="PmtBalance" label="PMT" width="100"/>
+        <el-table-column prop="PrtBalance" label="PRT" width="100"/>
+        <el-table-column prop="BaseStorage" label="BaseStorage" width="120"/>
         <el-table-column prop="RegisterTime" label="Register Time" width="160"/>
-        <el-table-column prop="Balance" label="Curent Token Qty"  width="160" />
+        <!-- <el-table-column prop="Balance" label="Curent Token Qty"  width="160" /> -->
         <!-- <el-table-column prop="Cpu" label="Cpu" />
         <el-table-column prop="Cpu" label="Cpu" />
         <el-table-column prop="Cpu" label="Cpu" />
