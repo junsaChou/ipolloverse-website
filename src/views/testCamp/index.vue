@@ -14,7 +14,7 @@
         >
       </p>
       <p>
-        This is the preview for testnet 1. The testnet 1 will start very soon.
+       The testnet 1 will start from Nov 22, 2022 to Dec 3, lasting for 12 days.
       </p>
       <p>Here is the introdoction document in English and Chinese.</p>
       <div class="detail tl">
@@ -57,22 +57,31 @@
       </div>
       <el-collapse v-model="activeNames" @change="handleChange">
         <el-collapse-item
-          title="1.What mining machines can be used for iPolloverse network?"
+          title="1.What machines can be used for rendering in iPolloverse network?"
           name="1"
         >
           <div class="tl">
-           We require computers with GPU/CPU, storage and bandwidth. The mining machines with ASIC cannot be used in iPolloverse network. Because iPolloverse network is providing real-time rendering power for metaverse, we require generic GPU/CPU, storage and bandwidth for rendering.
+          We recommend the following configuration:
+          </div>
+          <div class="tl">
+           • NVDIA RTX GPU 3080 or above, with upstream Bandwidth 100Mbps and storage 1TB. GPU below NVDIA GTX1060 not qualified for rendering.
+          </div>
+          <div class="tl">
+           • Need public network port mapping, TCP 8000-9000，TCP 11111，7777；UDP 20000-30000 to public port
+          </div>
+          <div class="tl">
+           • Operation system ubuntu 20.04 LTS x64.
+          </div>
+          <div class="tl">
+            The machines with ASIC cannot be used in iPolloverse network. AMD and Intel GPU cannot be used at this time either.
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="2.What the miners can do when running a node and facing an issue?"
+          title="2.What the computing power suppliers can do when running a node and facing an issue?"
           name="2"
         >
           <div class="tl">
-            Please compress your log file under home directory and submit to
-            https://github.com/iPolloverse/Test. For example, if your home path
-            in installation is/data/ipolloverse, the log path is
-            /data/ipolloverse/ipvRunner/log.
+            Please compress your log file under home directory and submit to https://github.com/iPolloverse/Test. For example, if your home path in installation is/data/ipolloverse, the log path is /data/ipolloverse/ipvRunner/log.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -80,8 +89,7 @@
           name="3"
         >
           <div  class="tl">
-            Currently testnet 1 only supports Linux. Windows will be supported
-            in the future.
+            Currently testnet 1 only supports Linux. Windows will be supported in the future.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -93,23 +101,19 @@
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="5.A node has been registered and connected to iPolloverse chain. When there is a need to download installation update, what can the minder do?"
+          title="5.5.A node has already been registered and connected to iPolloverse chain. Does the computing power supplier need to re-download installation package, what can s/he do?"
           name="5"
         >
           <div  class="tl">
-            You should go the original directory and use uninstall command to
-            uninstall the original script, and install the new script again.
+            You should go the original directory and use uninstall command to uninstall the original script, and install the new script again.
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="6.After the mining node connects to the chain, why the node configuration info, such as GPU or CPU, is not displayed in the miner login page?"
+          title="6.After the computing power node connects to the chain, why the node configuration info, such as GPU or CPU, is not displayed in the miner login page?"
           name="6"
         >
           <div class="tl">
-            As iPolloverse measures the computing power of connected nodes
-            irregularly (the measuring interval time could be from minutes to 4
-            hours), the CPU or GPU configuration info will be displayed after
-            the measurement.
+            As iPolloverse measures the computing power of connected nodes irregularly (the measuring interval time could be from minutes to 4 hours), the CPU or GPU configuration info will be displayed after the measurement.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -117,7 +121,7 @@
           name="7"
         >
           <div class="tl">
-            Currently iPolloverse cannot read AMD GPU card information, but it does not affect miners’ mining and token earning. iPolloverse has already measured the hashrate of the AMD GPU card, as well as the bandwidth and the storage. So, it does not affect the mining result. We will solve the importing information of AMD GPU card issue in the near future.
+            AMD and Intel GPU cannot be used at this time to supply computing power.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -125,15 +129,15 @@
           name="8"
         >
           <div class="tl">
-            iPolloverse testnet 1 does not have any requirement for public IP address.
+            Yes, the computing power supplier is required to have public IP address for rendering. S/he is required to have public network port mapping, TCP 8000-9000，TCP 11111，7777；UDP 20000-30000 to public port.
           </div>
         </el-collapse-item>
           <el-collapse-item
-          title="9.Can you recover a user’s password if s/he forgot his/her password?"
+          title="9.Can iPolloverse network recover a user’s password if s/he forgot his/her password?"
           name="9"
         >
           <div class="tl">
-            iPolloverse is a decentralized project and has no central database to store users’ password. There is no way to recover the password if it is lost. However, the users’ digital asset cannot be lost even if s/he forgot his/her password. S/he can re-register another user name, bind with the SAME WALLET, and his/her digital asset is there to display.
+           iPolloverse is a decentralized project and has no central database to store users’ password. There is no way to recover the password if it is lost. However, the users’ digital asset cannot be lost even if s/he forgot his/her password. S/he can re-register another user name, bind with the SAME WALLET, and his/her digital asset is there to display.
           </div>
         </el-collapse-item>
       </el-collapse>
@@ -144,19 +148,31 @@
       </div>
       <el-collapse v-model="activeNames" @change="handleChange">
         <el-collapse-item
-          title="1.什么样的设备可以挖矿？"
+          title="1.什么样的设备可以提供算力？"
           name="1"
         >
           <div class="tl">
-           具有GPU/CPU，存储和带宽的计算机设备，可以挖矿。带ASIC芯片的矿机不能在iPolloverse网络挖矿。因为iPollverse网络是提供元宇宙实时渲染的网络，需要用通用GPU/CPU、存储和带宽提供算力。
+            我们推荐配置如下：
+          </div>
+          <div class="tl">
+           • RTX GPU 3080及以上, 上行带宽100Mbps, 存储 1TB。GPU低于GTX1060将无法获得渲染任务。
+          </div>
+          <div class="tl">
+            • 需要做公网端口映射，TCP 8000-9000，TCP 11111，7777；UDP 20000-30000到公网对应端口
+          </div>
+           <div class="tl">
+            • 操作系统ubuntu 20.04 LTS x64.
+          </div>
+           <div class="tl">
+            带ASIC芯片的矿机不能给iPolloverse网络提供算力。当前iPolloverse只支持英伟达GPU，不能支持其它GPU比如AMD和Intel的。
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="2.矿工碰到节点运行情况需要解决怎么办？"
+          title="2.算力提供方碰到节点运行情况需要解决怎么办？"
           name="2"
         >
           <div class="tl">
-           请把home目录下面的log目录打包递交到 https://github.com/iPolloverse/Test。比如安装时选择的home路径是/data/ipolloverse，那log路径就是/data/ipolloverse/ipvRunner/log。
+          请把home目录下面的log目录打包递交到 https://github.com/iPolloverse/Test。比如安装时选择的home路径是/data/ipolloverse，那log路径就是/data/ipolloverse/ipvRunner/log。
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -176,7 +192,7 @@
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="5.矿机已经注册了节点，并连到iPolloverse网络。需要重新下载安装包时，怎么做？"
+          title="5.设备已经注册了节点，并连到iPolloverse网络。需要重新下载安装包时，怎么做？"
           name="5"
         >
           <div  class="tl">
@@ -184,7 +200,7 @@
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="6.节点接入网络后，为什么矿工登录页面没有显示CPU/GPU算力配置？"
+          title="6.节点接入网络后，为什么算力提供方登录页面没有显示CPU/GPU算力配置？"
           name="6"
         >
           <div class="tl">
@@ -192,11 +208,11 @@
           </div>
         </el-collapse-item>
          <el-collapse-item
-          title="7.为什么用AMD的GPU挖矿，矿工登录界面里面的GPU为什么显示0？对挖矿有影响没有？"
+          title="7.为什么用AMD的GPU挖矿，算力提供方登录界面里面的GPU为什么显示0？对挖矿有影响没有？"
           name="7"
         >
           <div class="tl">
-          这是因为当前iPolloverse不能读取AMD GPU卡的信息，但是不影响挖矿和分配测试积分。因为iPolloverse可以测出A卡的Hashrate值，也可以测量出带宽和存储，因此不影响矿工正常挖矿。对A卡GPU的信息读取，我们在未来会解决
+          当前iPolloverse只支持英伟达GPU，不能支持其它GPU比如AMD和Intel的。
           </div>
         </el-collapse-item>
          <el-collapse-item
@@ -204,10 +220,10 @@
           name="8"
         >
           <div class="tl">
-          iPolloverse一测对矿机是否有公网地址没有要求。
+          一测对IP有公网要求。 需要做公网端口映射，TCP 8000-9000，TCP 11111，7777；UDP 20000-30000到公网对应端口
           </div>
         </el-collapse-item>
-           <el-collapse-item
+        <el-collapse-item
           title="9.用户登录的密码忘记了可以恢复吗？"
           name="9"
         >
