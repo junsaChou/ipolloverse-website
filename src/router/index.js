@@ -24,12 +24,17 @@ const routes = [
     path: '/nodeOverview',
     name: 'nodeOverview',
     component: () => import('../views/tableData/index.vue'),
+  },
+  {
+    path: '/bulletin',
+    name: 'bulletin',
+    component: () => import('../views/bulletin/index.vue')
   }
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  // history: createWebHistory(),
+  // history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
