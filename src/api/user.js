@@ -17,9 +17,11 @@ export function getTableData(token) {
   })
 }
 
-export function logout() {
+export function getSpaceList(data) {
   return request({
-    url: '/vue-admin-template/user/logout',
-    method: 'post'
+    url: '/ipolloverse/admin/spaceList02',
+    method: 'post',
+    data
   })
 }
+

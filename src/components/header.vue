@@ -6,35 +6,27 @@
         <router-link to="/" class="logo">
           <img src="../assets/img/logo.png" alt />
         </router-link>
-        <!-- <div class="list" >
-          <el-menu
-            :default-active="activeIndex"
-            class="el-menu-demo"
-            :mode="isActive ? '':'horizontal'"
-            @select="handleSelect"
-            background-color="#1B1B1B"
-            text-color="#fff"
-            active-text-color="#fff"
-          >
-            <el-menu-item index="1">
-              <router-link to="/" active-class="active" exact>Home</router-link>
-            </el-menu-item>
-             <el-menu-item index="2">
-              Roadmap
-            </el-menu-item>
-             <el-menu-item index="3">
-              News
-            </el-menu-item>
-            <el-menu-item index="4">
-             Contact
-            </el-menu-item>
-          </el-menu>
-        </div> -->
         <div class="list">
           <ul class="ipo_menu">
             <li class="ipo_menu_item">
                <router-link to="/" active-class="active" exact>Home</router-link>
             </li>
+            <!-- <li class="ipo_menu_item">
+                 <el-dropdown @command="handleChange">
+                      Space
+                    <template #dropdown >
+                      <el-dropdown-menu>
+                        <el-dropdown-item v-for="(item,i) in spaceList" :command="item.SpaceId" :key="i">
+                           {{item.SpaceName}}
+                        </el-dropdown-item>
+                        <el-dropdown-item>斗兽场 </el-dropdown-item>
+                        <el-dropdown-item>星际战舰 </el-dropdown-item>
+                        <el-dropdown-item>go Space </el-dropdown-item>
+                        <el-dropdown-item>故宫 </el-dropdown-item>
+                      </el-dropdown-menu>
+                    </template>
+                  </el-dropdown>
+            </li> -->
             <li class="ipo_menu_item" @click="goBack('https://demo2.ipolloverse.cn/')">Space</li>
             <li class="ipo_menu_item" @click="goBack('#roadmap')">
               Roadmap
@@ -57,8 +49,9 @@
 </template>
 
 <script>
-import { reactive,toRefs } from 'vue'
+import { reactive,toRefs,ref } from 'vue'
 import { goBack } from "../utils"
+import { getSpaceList } from '@/api/user'
 export default {
   name: 'ipoHed',
   props: {
@@ -72,10 +65,23 @@ export default {
     const handleSelect = (key,keyPath)=>{
       // console.log( key )
     }
+    const handleChange = (SpaceId) => {
+      window.open(`https://gslb.ipolloverse.com/${SpaceId}/index.html`)
+    }
+    let spaceList = ref( [])
+    const  getSpaceListApi = async() =>{
+      let  data  = await getSpaceList({ ownerAddr:'0x0' });
+      if ( data.length >0 ){
+         spaceList.value = data.filter(item => item.Status>3 )
+      }
+    } 
+    // getSpaceListApi();
     return{
+      spaceList,
       ...toRefs(data),
       handleSelect,
-      goBack
+      goBack,
+      handleChange
     }
   }
 };
@@ -137,6 +143,15 @@ export default {
           a, a:active, a:focus, a:hover, a:visited {
               text-decoration: none;
               color: #fff;
+          }
+          :deep(.el-dropdown){
+            .el-tooltip__trigger{
+                font-size: 20px;
+                height: 100%;
+                color: #fff;
+                margin: 0 10px;
+                font-weight: bold;
+            }
           }
         }
         .ipo_menu_item:after {
