@@ -7,9 +7,10 @@
         <el-button type="success"  @click="this.$router.push('/dashboard')">Dashboard</el-button>
         <el-button type="success"  @click="this.$router.push('/bulletin')">Bulletin</el-button>
       </div>
-      <p>Welcome to iPolloverse Test Camp!</p>
+      <p>Welcome to iPollo Test Camp!</p>
       <p>
-        Please join as a computing power supplier on
+        Please join as a computing power supplier on<br/>
+        Node register entry is coming soon.
         <a href="https://ecotools.ipolloverse.com/miner" target="_blank"
           >https://ecotools.ipolloverse.com/miner</a
         >
@@ -17,27 +18,36 @@
       <p>
        The testnet 1 will start from Nov 22, 2022 to Dec 3, lasting for 12 days.
       </p>
-      <p>Here is the introdoction document in English and Chinese.</p>
+      <p>Here are the relevant documents for rendering suppliers.</p>
       <div class="detail tl">
         <a
-          href="https://www.ipolloverse.com/downFile/ipolloverse_computing_power_supplier_document_V1.4_ENG.pdf"
+          href="https://www.ipollo.org/downFile/ipollo_computing_power_supplier_document_V1.6_ENG.pdf"
         >
-          1. ipolloverse computing power supplier document V1.4_ENG
+           1. iPollo Computing Power Supplier Document V1.6_ENG
         </a>
       </div>
       <div class="detail tl">
         <a
-          href="https://www.ipolloverse.com/downFile/ipolloverse_computing_power_supplier_document_V1.4_CHN.pdf"
+          href="https://www.ipollo.org/downFile/ipollo_computing_power_supplier_document_V1.6_CHN.pdf"
         >
-          2. iPolloverse 算力供应方手册V1.4中文版
+          2. iPollo 算力供应方手册V1.6中文版
         </a>
       </div>
+      <div class="detail tl">
+        <a
+          href="https://www.ipollo.org/downFile/Windows_install_use.zip"
+        >
+          3. 渲染算力windows安装包
+        </a>
+      </div>
+      <!-- Windows_install_use.zip -->
       <p>And this is video of how to join this test.</p>
+      <!-- <p>Here are the relevant documents for rendering suppliers.</p> -->
     
       <div class="html5-video" data-layer="0">
         <video controls name="media">
           <source
-            src="https://www.ipolloverse.com/downFile/miner_ipolloverse.mp4"
+            src="https://www.ipollo.org/downFile/miner_ipolloverse.mp4"
             type="video/mp4"
           />
         </video>
@@ -50,7 +60,7 @@
 
     </div>
     <div class="con con_750">
-            <p>(Daily form shows accumulated information of all registered nodes in iPolloverse network. The form is updated every day noon GMT (Greenwich Mean Time)).</p>
+            <p>(Daily form shows accumulated information of all registered nodes in iPollo network. The form is updated every day noon GMT (Greenwich Mean Time)).</p>
     </div>
     <div class="demo_collapse con">
        <div class="hed-name" id="FAQ_en">
@@ -58,7 +68,7 @@
       </div>
       <el-collapse v-model="activeNames" @change="handleChange">
         <el-collapse-item
-          title="1.What machines can be used for rendering in iPolloverse network?"
+          title="1.What machines can be used for rendering in iPollo network?"
           name="1"
         >
           <div class="tl">
@@ -74,7 +84,7 @@
            • Operation system ubuntu 20.04 LTS x64. Desktop
           </div>
           <div class="tl">
-            The machines with ASIC cannot be used in iPolloverse network. AMD and Intel GPU cannot be used at this time either.
+            The machines with ASIC cannot be used in iPollo network. AMD and Intel GPU cannot be used at this time either.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -116,7 +126,7 @@
           name="4"
         >
           <div class="tl">
-          You can recreate an account and bind the correct wallet and your machine with this new account, as currently iPolloverse does not support unbinding wallet.
+          You can recreate an account and bind the correct wallet and your machine with this new account, as currently iPollo does not support unbinding wallet.
           </div>
         </el-collapse-item>
             <el-collapse-item
@@ -136,15 +146,15 @@
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="7.Does iPolloverse support WSL/WSL1 (Windows Subsystem for Linux)?"
+          title="7.Does iPollo support WSL/WSL1 (Windows Subsystem for Linux)?"
           name="7"
         >
           <div  class="tl">
-            iPolloverse does not support WSL/WSL1 at this time, as the network setting for WSL/WSL1 is different from traditional Linux. We recommend using VMware virtualization software.
+            iPollo does not support WSL/WSL1 at this time, as the network setting for WSL/WSL1 is different from traditional Linux. We recommend using VMware virtualization software.
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="8.A node has already been registered and connected to iPolloverse chain. Does the computing power supplier need to re-download installation package, what can s/he do?"
+          title="8.A node has already been registered and connected to iPollo chain. Does the computing power supplier need to re-download installation package, what can s/he do?"
           name="8"
         >
           <div  class="tl">
@@ -156,7 +166,7 @@
           name="9"
         >
           <div class="tl">
-            As iPolloverse measures the computing power of connected nodes irregularly (the measuring interval time could be from minutes to 4 hours), the CPU or GPU configuration info will be displayed after the measurement.
+            As iPollo measures the computing power of connected nodes irregularly (the measuring interval time could be from minutes to 4 hours), the CPU or GPU configuration info will be displayed after the measurement.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -176,11 +186,11 @@
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="12.Can iPolloverse network recover a user’s password if s/he forgot his/her password?"
+          title="12.Can iPollo network recover a user’s password if s/he forgot his/her password?"
           name="12"
         >
           <div class="tl">
-           iPolloverse is a decentralized project and has no central database to store users’ password. There is no way to recover the password if it is lost. However, the users’ digital asset cannot be lost even if s/he forgot his/her password. S/he can re-register another user name, bind with the SAME WALLET, and his/her digital asset is there to display.
+           iPollo is a decentralized project and has no central database to store users’ password. There is no way to recover the password if it is lost. However, the users’ digital asset cannot be lost even if s/he forgot his/her password. S/he can re-register another user name, bind with the SAME WALLET, and his/her digital asset is there to display.
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -215,7 +225,7 @@
             • 操作系统ubuntu 20.04 LTS x64，桌面版
           </div>
            <div class="tl">
-            带ASIC芯片的矿机不能给iPolloverse网络提供算力。当前iPolloverse只支持英伟达GPU，不能支持其它GPU比如AMD和Intel的。
+            带ASIC芯片的矿机不能给iPollo网络提供算力。当前iPollo只支持英伟达GPU，不能支持其它GPU比如AMD和Intel的。
           </div>
         </el-collapse-item>
         <el-collapse-item
@@ -285,7 +295,7 @@
           </div>
         </el-collapse-item>
         <el-collapse-item
-          title="8.设备已经注册了节点，并连到iPolloverse网络。需要重新下载安装包时，怎么做？"
+          title="8.设备已经注册了节点，并连到iPollo网络。需要重新下载安装包时，怎么做？"
           name="8"
         >
           <div  class="tl">
@@ -305,7 +315,7 @@
           name="10"
         >
           <div class="tl">
-          当前iPolloverse只支持英伟达GPU，不能支持其它GPU比如AMD和Intel的。
+          当前iPollo只支持英伟达GPU，不能支持其它GPU比如AMD和Intel的。
           </div>
         </el-collapse-item>
          <el-collapse-item
@@ -321,7 +331,7 @@
           name="12"
         >
           <div class="tl">
-          iPolloverse是去中心化项目，没有数据库保存用户密码。如果用户密码忘记了，是没有办法恢复。但是，用户密码丢了，资产不会丢，用户可以重新注册一个用户名，用同一个钱包绑定，就可以显示资产。
+          iPollo是去中心化项目，没有数据库保存用户密码。如果用户密码忘记了，是没有办法恢复。但是，用户密码丢了，资产不会丢，用户可以重新注册一个用户名，用同一个钱包绑定，就可以显示资产。
           </div>
         </el-collapse-item>
         <el-collapse-item

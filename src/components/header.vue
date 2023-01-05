@@ -9,32 +9,19 @@
         <div class="list">
           <ul class="ipo_menu">
             <li class="ipo_menu_item">
-               <router-link to="/" active-class="active" exact>Home</router-link>
+               <router-link to="/" active-class="active" >Space</router-link>
             </li>
-            <!-- <li class="ipo_menu_item">
-                 <el-dropdown @command="handleChange">
-                      Space
-                    <template #dropdown >
-                      <el-dropdown-menu>
-                        <el-dropdown-item v-for="(item,i) in spaceList" :command="item.SpaceId" :key="i">
-                           {{item.SpaceName}}
-                        </el-dropdown-item>
-                        <el-dropdown-item>斗兽场 </el-dropdown-item>
-                        <el-dropdown-item>星际战舰 </el-dropdown-item>
-                        <el-dropdown-item>go Space </el-dropdown-item>
-                        <el-dropdown-item>故宫 </el-dropdown-item>
-                      </el-dropdown-menu>
-                    </template>
-                  </el-dropdown>
-            </li> -->
-            <li class="ipo_menu_item" @click="goBack('https://demo2.ipolloverse.cn/')">Space</li>
+            <li class="ipo_menu_item">
+               <router-link to="/Intro"  active-class="active">Intro</router-link>
+            </li>
+            <!-- <li class="ipo_menu_item" @click="goBack('https://demo2.ipolloverse.cn/')">Space</li> -->
             <li class="ipo_menu_item" @click="goBack('#roadmap')">
               Roadmap
               </li>
-            <li class="ipo_menu_item" @click="goBack('https://medium.com/@ipolloverse')">News</li>
+            <li class="ipo_menu_item" @click="goBack('https://medium.com/@ipollo')">News</li>
             <li class="ipo_menu_item" @click="goBack('#contact')">Contact</li>
              <li class="ipo_menu_item">
-               <router-link to="/TestCamp"  >TestCamp</router-link>
+               <router-link to="/TestCamp"  active-class="active">TestCamp</router-link>
             </li>
           </ul>
         </div>
@@ -62,13 +49,15 @@ export default {
       isActive: false,
       activeIndex: '1'
     })
-    const handleSelect = (key,keyPath)=>{
-      // console.log( key )
+    const handleChange = (url) => {
+      window.open(url)
+      // window.open(`https://gslb.ipolloverse.com/${SpaceId}/index.html`)
     }
-    const handleChange = (SpaceId) => {
-      window.open(`https://gslb.ipolloverse.com/${SpaceId}/index.html`)
-    }
-    let spaceList = ref( [])
+    // let spaceList = ref( [
+    //   // {SpaceId: 1,url:  'https://demo2.ipolloverse.cn/',SpaceName:'SportsField'},
+    //   {SpaceId: 2,url:  'https://gslb.ipolloverse.com/s_6b1163ed-f244-48df-bb5a-bc82e81c60b0/index.html',SpaceName:'GoSpace'},
+    //   {SpaceId: 3,url:  'https://gslb.ipolloverse.com/s_06684a36-dc6e-466d-ba31-883632a43440/index.html',SpaceName:'ColoseumRome'},
+    // ])
     const  getSpaceListApi = async() =>{
       let  data  = await getSpaceList({ ownerAddr:'0x0' });
       if ( data.length >0 ){
@@ -76,10 +65,9 @@ export default {
       }
     } 
     // getSpaceListApi();
+       // spaceList,
     return{
-      spaceList,
       ...toRefs(data),
-      handleSelect,
       goBack,
       handleChange
     }
@@ -116,7 +104,7 @@ export default {
       // padding: 0px 40px 0 0;
       display: inline-block;
       img {
-        width: 175px;
+        width: 110px;
         height: auto;
       }
     }

@@ -6,21 +6,21 @@
             <img src="../assets/img/logo.png" alt />
             </router-link>
             <div class="website">
-                © 2022 iPolloverse
+                © 2022 iPollo
             </div>
         </div>
         <div class="rit">
              <div class="openUrl" v-for=" ( k,i ) in menu" :key="i" @click="goBack(k.url)">
                 
-                <img :src="k.img" alt="contact@iPolloverse.com" v-if=" i < 4 ">
+                <img :src="k.img" alt="contact@ipollo.org" v-if=" i < 4 ">
                 <el-tooltip
                     v-else
                     class="box-item"
                     effect="dark"
-                    content="contact@iPolloverse.com"
+                    content="contact@ipollo.org"
                     placement="top"
                 >
-                     <img :src="k.img" alt="contact@iPolloverse.com" >
+                     <img :src="k.img" alt="contact@ipollo.org" >
                 </el-tooltip>
             </div> 
         </div>
@@ -48,18 +48,19 @@ export default {
                 url:'https://twitter.com/iPolloverse'
             },
             {   img: new URL("../assets/img/medium.png", import.meta.url).href,
-                url:'https://medium.com/@ipolloverse'
+                url:'https://medium.com/@ipollo'
             },
             {   img: new URL("../assets/img/miner.png", import.meta.url).href,
                 url: 'https://discord.gg/8VTVnApfqG',
             },
             {   img: new URL("../assets/img/eco.png", import.meta.url).href,
-                url:'https://t.me/iPolloverseminer'
+                // url:'https://t.me/iPolloverseminer'
+                url:'https://t.me/iPollominers'
                 // url:'https://t.me/iPolloverseeco'
             },
             {   img: new URL("../assets/img/email.png", import.meta.url).href,
                 url: ''
-                // url:'mailto:contact@iPolloverse.com'
+                // url:'mailto:contact@ipollo.org'
             }
         ]
     });
@@ -99,7 +100,7 @@ footer{
         .left{
             .logo img{
                 display: block;
-                width: 175px;
+                width: 110px;
                 height: auto;
             }
             .website{

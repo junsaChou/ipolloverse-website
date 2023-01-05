@@ -23,14 +23,14 @@
               immersive experiences.
             </p>
             <p>
-              iPolloverse provides such an infrastructure platform for
-              Metaverse. That is to say, iPolloverse provides massive computing
+              iPollo provides such an infrastructure platform for
+              Metaverse. That is to say, iPollo provides massive computing
               power for 3D rendering, and provides basic tool services for
               creators of 3D worlds, especially asset trading services based on
               3D NFT.
             </p>
             <p>
-              iPolloverse is a service provider of blockchain-native 3D
+              iPollo is a service provider of blockchain-native 3D
               Metaverse infrastructure and an ecosystem enabler.
             </p>
           </div>
@@ -42,24 +42,24 @@
           <div class="item">
             <h3 class="tl">Asset Creation in a Lightspeed Way</h3>
             <div class="wrap">
-              iPolloverse believes everything in the Metaverse to be NFTable. In
-              other words, all things generated in iPolloverse can be NFTable.
-              NFTs generated in iPolloverse are native to blockchain, and NFTs
-              of other public chains are interoperable with iPolloverse. NFTs
+              iPollo believes everything in the Metaverse to be NFTable. In
+              other words, all things generated in iPollo can be NFTable.
+              NFTs generated in iPollo are native to blockchain, and NFTs
+              of other public chains are interoperable with iPollo. NFTs
               can be circulated and used in various Metaverses built on top of
-              iPolloverse, while they are also an interactive support among
+              iPollo, while they are also an interactive support among
               Metaverses.
             </div>
           </div>
           <div class="item">
             <h3 class="tl">Massive Concurrent Online Interaction</h3>
             <div class="wrap">
-              In iPolloverse, players no longer need to be assigned to
+              In iPollo, players no longer need to be assigned to
               confined spaces and form isolated scene islands, but all can be
               boundless connected in real-time in this Metaverse <br /><br />
-              iPolloverse uses Web3D and cloud rendering technology to offload computing
+              iPollo uses Web3D and cloud rendering technology to offload computing
               tasks from client to the cloud. The interactive rendering
-              orchestration between the cloud and the client makes iPolloverse
+              orchestration between the cloud and the client makes iPollo
               an agile platform for tens of millions of players to be online
               concurrently. Players can roam in the Metaverse just through the
               web browser and have an immersive virtual experience.
@@ -68,12 +68,12 @@
           <div class="item">
             <h3 class="tl">Efficient Real-time Rendering</h3>
             <div class="wrap">
-              iPolloverse will use the innovative consensus mechanism to gather
+              iPollo will use the innovative consensus mechanism to gather
               global computing power and combine with new rendering technology
               to achieve lower cost and lower latency real-time rendering. <br /><br />
-              The low latency that players feel in iPolloverse is due to many
+              The low latency that players feel in iPollo is due to many
               technology innovations in the rendering process as well as on
-              network level. At the same time, iPolloverse can orchestrate the
+              network level. At the same time, iPollo can orchestrate the
               computing power of intimate edge nodes and thus reduce the
               transmission delay.
             </div>
@@ -114,9 +114,9 @@
         </h2>
         <div class="wrap">
           <p class="tc">Let’s go to open world.</p>
-          <p class="tc"> iPolloverse is the Metaverse Enabler. An open Metaverse means to seamlessly communicate across
+          <p class="tc"> iPollo is the Metaverse Enabler. An open Metaverse means to seamlessly communicate across
             multi-verses.</p>
-          <p class="tc">iPolloverse collaborates with various ecosystem partners to launch a new experience of
+          <p class="tc">iPollo collaborates with various ecosystem partners to launch a new experience of
             entertainment, life, work and XR in Metaverse.</p>
           <div class="slide">
             <div class="top">
@@ -194,9 +194,9 @@ export default {
         { name: 'Inter-API' }
       ],
       solutions: [
-        { title: 'Eco platform', detail: 'The ecosystem layer is the tool layer for iPolloverse to connect with various Metaverse participants. In order to provide convenient services for Metaverse community builders, event organizers, virtual building/real estate owners and content producers, the ecosystem layer provides various supports, including numerous interactive SDKs, tools used by studios, engines for producing 3D NFTs, warehouses for storing assets, markets for trading NFTs etc.' },
-        { title: 'Meta computing', detail: 'The meta computing layer is the core layer of the iPolloverse. It forms a web3D rendering architecture interacting with the web client. It divides the entire rendering task into three parts, which are cloud, edge and browser, to meet the needs of various metaverse 3D scenes and object activities. iPolloverse dynamically calculates the field of view (FOI, frustum of interest) of each avatar in real time, and provides progressive rendering for the first view of each avatar. Thereby it reduces latency and greatly enhances the numbers of simultaneous online avatars in an open space, from hundreds in a bar, to thousands in bar street, to tens of thousands in a gym, to tens of millions in a virtual concert.' },
-        { title: 'Data network', detail: 'The data transmission layer is a key innovation of iPolloverse. In order to render the interaction of 3D scenes and objects in the Metaverse, data transmission of gigabytes is the core of the entire low-latency experience. In some test cases, HARQ P2P transmission technology, which was originally developed by iPolloverse, has fastened more than 100 times of transmission time compared to traditional networks.' },
+        { title: 'Eco platform', detail: 'The ecosystem layer is the tool layer for iPollo to connect with various Metaverse participants. In order to provide convenient services for Metaverse community builders, event organizers, virtual building/real estate owners and content producers, the ecosystem layer provides various supports, including numerous interactive SDKs, tools used by studios, engines for producing 3D NFTs, warehouses for storing assets, markets for trading NFTs etc.' },
+        { title: 'Meta computing', detail: 'The meta computing layer is the core layer of the iPollo. It forms a web3D rendering architecture interacting with the web client. It divides the entire rendering task into three parts, which are cloud, edge and browser, to meet the needs of various metaverse 3D scenes and object activities. iPollo dynamically calculates the field of view (FOI, frustum of interest) of each avatar in real time, and provides progressive rendering for the first view of each avatar. Thereby it reduces latency and greatly enhances the numbers of simultaneous online avatars in an open space, from hundreds in a bar, to thousands in bar street, to tens of thousands in a gym, to tens of millions in a virtual concert.' },
+        { title: 'Data network', detail: 'The data transmission layer is a key innovation of iPollo. In order to render the interaction of 3D scenes and objects in the Metaverse, data transmission of gigabytes is the core of the entire low-latency experience. In some test cases, HARQ P2P transmission technology, which was originally developed by iPollo, has fastened more than 100 times of transmission time compared to traditional networks.' },
         { title: ' Blockchain', detail: 'The blockchain consensus layer uses the PoCP consensus algorithm to divide the connected servers into standard Dockers according to their GPU/CPU, memory and bandwidth performance. Rendering tasks are matched with connected servers through smart contracts with the requirements of high performance and low latency. This layer also forms cross-chain interoperability with other blockchains, especially for Metaverse and GameFi.' },
       ],
       flagIndex: 4,

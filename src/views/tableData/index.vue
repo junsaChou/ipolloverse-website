@@ -9,8 +9,8 @@
         <el-table-column prop="Gpu" label="GUP Info" width="100"/>
         <el-table-column prop="Cpu" label="CPU Info" width="100"/>
         <el-table-column prop="Os" label="Os" width="100"/>
-        <el-table-column prop="PmtBalance" label="PMT" width="100"/>
-        <el-table-column prop="PrtBalance" label="PRT" width="100"/>
+        <el-table-column prop="IpoBalance" label="PMT" width="100"/>
+        <el-table-column prop="RusdBalance" label="PRT" width="100"/>
         <el-table-column prop="BaseStorage" label="BaseStorage" width="120"/>
         <el-table-column prop="RegisterTime" label="Register Time" width="160"/>
         <!-- <el-table-column prop="Balance" label="Curent Token Qty"  width="160" /> -->

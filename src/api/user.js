@@ -17,9 +17,24 @@ export function getTableData(token) {
   })
 }
 
+// export function getSpaceList(data) {
+//   return request({
+//     url: '/ipolloverse/admin/spaceList02',
+//     method: 'post',
+//     data
+//   })
+// }
+export function getSpaceView(data) {
+  return request({
+    url: '/nanotool/getSpaceViews',
+    method: 'post',
+    data
+    // params: { token }
+  })
+}
 export function getSpaceList(data) {
   return request({
-    url: '/ipolloverse/admin/spaceList02',
+    url: '/user/getSpaces',
     method: 'post',
     data
   })

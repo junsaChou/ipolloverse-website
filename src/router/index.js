@@ -3,8 +3,8 @@ import HomeView from '../views/home.vue';
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
+    path: '/Intro',
+    name: 'Intro',
     component: HomeView,
   },
   {
@@ -17,18 +17,33 @@ const routes = [
   },
   {
     path: '/dashboard',
-    name: 'dashboard',
+    name: 'Dashboard',
     component: () => import('../views/dashboard/index.vue'),
   },
   {
     path: '/nodeOverview',
-    name: 'nodeOverview',
+    name: 'NodeOverview',
     component: () => import('../views/tableData/index.vue'),
   },
   {
     path: '/bulletin',
-    name: 'bulletin',
+    name: 'Bulletin',
     component: () => import('../views/bulletin/index.vue')
+  },
+  {
+    path: '/UserAgreement',
+    name: 'UserAgreement',
+    component: () => import('../views/userAgreement/index.vue')
+  },
+  {
+    path: '/OperatorAgreement',
+    name: 'OperatorAgreement',
+    component: () => import('../views/operatorAgreement/index.vue')
+  },
+  {
+    path: '/',
+    name: 'SpaceList',
+    component: () => import('../views/spaceDom/index.vue')
   }
 ];
 

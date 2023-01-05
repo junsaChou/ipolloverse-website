@@ -1,5 +1,5 @@
 {
-  "name": "ipolloverse",
+  "name": "iPollo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "element-plus": "^2.2.8",
     "swiper": "^6.5.6",
     "vue": "^3.2.13",
+    "vue-lazyload": "^3.0.0-rc.2",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
