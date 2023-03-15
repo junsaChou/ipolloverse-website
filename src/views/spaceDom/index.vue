@@ -100,7 +100,7 @@ components: {},
         let { spaces } = res;
         spaces.forEach(async ( k, i) => {
           let { previewUrl,spaceId,spaceName,status } = k;
-            previewUrl= previewUrl.replace('http://ecotools.ipolloverse.com:801','https://www.ipollo.org/ecoTools')
+            previewUrl= previewUrl.replace('http://47.243.166.221:801','https://www.ipollo.org/ecoTools')
             let count = await getSpaceViewApi(spaceId)
             let jsonObj =  { previewUrl,spaceId,spaceName,spaceCount:count }
             spaceList.value.push(JSON.parse( JSON.stringify(jsonObj)))
